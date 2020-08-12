@@ -1,0 +1,314 @@
+.ck-editor__editable,
+textarea {
+    min-height: 150px;
+}
+
+.datatable {
+    width: 100% !important;
+}
+
+.dataTables_length,
+.dataTables_filter,
+.dt-buttons {
+    margin-bottom: 0.333em;
+}
+
+.dt-buttons .btn {
+    margin-left: 0.333em;
+    border-radius: 0;
+}
+
+.table.datatable {
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+table.dataTable thead th {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.dataTables_wrapper.no-footer .dataTables_scrollBody {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.select2 {
+    max-width: 100%;
+    width: 100%;
+}
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+    background-image: none;
+}
+
+.btn-group-xs > .btn,
+.btn-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+.searchable-title {
+    font-weight: bold;
+}
+.select2-container--open {
+    z-index: 9999;
+}
+.searchable-fields {
+    padding-left:5px;
+}
+.searchable-link {
+    padding:0 5px 0 5px;
+}
+.searchable-link:hover   {
+    cursor: pointer;
+    background: #eaeaea;
+}
+.select2-results__option {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.form-group .required::after {
+    content: " *";
+    color: red;
+}
+
+.form-check.is-invalid ~ .invalid-feedback {
+    display: block;
+}
+
+.tabs {
+    min-width: 320px;
+    max-width: 1000px;
+    padding: 0px;
+    margin: 0 auto;
+}
+
+
+/* Стили секций с содержанием */
+
+.tabs>section {
+    display: none;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+    margin: 0 0 5px;
+    line-height: 1.5;
+    color: #383838;
+    /* прикрутим анимацию */
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+
+/* Описываем анимацию свойства opacity */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Прячем чекбоксы */
+
+.tabs>input {
+    display: none;
+    position: absolute;
+}
+
+
+/* Стили переключателей вкладок (табов) */
+
+.tabs>label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #aaa;
+    border: 0px solid #ddd;
+    border-width: 1px 1px 1px 1px;
+    background: #f1f1f1;
+    border-radius: 3px 3px 0 0;
+}
+
+
+/* Шрифт-иконки от Font Awesome в формате Unicode */
+
+.tabs>label:before {
+    font-family: fontawesome;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+
+/* Изменения стиля переключателей вкладок при наведении */
+
+.tabs>label:hover {
+    color: #888;
+    cursor: pointer;
+}
+
+
+/* Стили для активной вкладки */
+
+.tabs>input:checked+label {
+    color: #555;
+    border-top: 1px solid #636b6f;
+    border-bottom: 1px solid #fff;
+    background: #fff;
+}
+
+
+/* Активация секций с помощью псевдокласса :checked */
+
+#tab1:checked~#content-tab1,
+#tab2:checked~#content-tab2,
+#tab3:checked~#content-tab3,
+#tab4:checked~#content-tab4 {
+    display: block;
+}
+
+
+/* Убираем текст с переключателей
+* и оставляем иконки на малых экранах
+*/
+
+@media screen and (max-width: 680px) {
+    .tabs>label {
+        font-size: 0;
+    }
+    .tabs>label:before {
+        margin: 0;
+        font-size: 18px;
+    }
+}
+
+
+/* Изменяем внутренние отступы
+*  переключателей для малых экранов
+*/
+
+@media screen and (max-width: 400px) {
+    .tabs>label {
+        padding: 15px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.timetable {
+    display: grid;
+    grid-template-areas: ". week" "time content";
+    grid-template-columns: 120px;
+    grid-template-rows: 60px;
+    width: 100%;
+    height: 100vh;
+}
+
+.timetable .accent-orange-gradient {
+    display: -webkit-box;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 10px;
+    background:linear-gradient(160deg, #62aac4, #3a489b);
+    -webkit-transition: .2s ease box-shadow, .2s ease transform;
+    transition: .2s ease box-shadow, .2s ease transform;
+}
+.timetable .accent-orange-gradient:hover {
+    box-shadow: 0px 10px 20px 0px rgba(76, 76, 76, 0.82);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.timetable .accent-green-gradient {
+    display: -webkit-box;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 10px;
+    background:linear-gradient(160deg, #5ec496, #0e9b2d);
+    -webkit-transition: .2s ease box-shadow, .2s ease transform;
+    transition: .2s ease box-shadow, .2s ease transform;
+}
+.timetable .accent-green-gradient:hover {
+    box-shadow: 0px 10px 20px 0px rgba(76, 76, 76, 0.82);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.timetable .weekend {
+    background: #fbfbfc;
+    color: #87a1ad;
+}
+.timetable .week-names {
+    grid-area: week;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.timetable .week-names > div {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 1px 0 0 #ECEFF1;
+}
+.timetable .time-interval {
+    grid-area: time;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    font-size: 14px;
+}
+.timetable .time-interval > div {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 1px 0 0 #ECEFF1;
+}
+.timetable .content {
+    grid-area: content;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+}
+.timetable .content > div {
+    box-shadow: inset 1px 0 0 #ECEFF1, inset 0 1px 0 0 #ECEFF1;
+}
